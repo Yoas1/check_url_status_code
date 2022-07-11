@@ -11,8 +11,8 @@ Monitor web-pages.
 **Each option comes in a different script**
 
 
-### Dont forget
+## Dont forget
 Add to config file the web name and url 
 
 
-**Enjoy!**
+### Enjoy!
