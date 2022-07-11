@@ -5,7 +5,7 @@ Tool to health check for web tools.
 Monitor web-pages.
 
 
-##the tool came with two options:
+## the tool came with two options:
 **1** - Windows 10 popup error.
 **2** - Tkinter popup error.
 **Each option comes in a different script**
