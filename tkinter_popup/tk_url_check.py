@@ -23,6 +23,7 @@ def clear_screen():
 
 
 while True:
+    global interval
     try:
         urls_file = open('urls-config', 'r')
         urls_data = urls_file.read()
@@ -32,7 +33,11 @@ while True:
         pass
 
     try:
-        for url in urls:
+        conf_len = len(urls)
+        for t in range(conf_len - (comf_len -1 )):
+            interval = int(urls[t])
+        for url in range(lens(urls)):
+            url = urls[url]
             list_url = url.split(' ')
             try:
                 response = requests.get(list_url[1]) #for use certificate -> verify=/path/to/crt/file
@@ -45,7 +50,7 @@ while True:
             except:
                 info(list_url[0] + ' not working ')
                 print('Error ' + list_url[0])
-        time.sleep(5)
+        time.sleep(interval)
         clear_screen()
     except NameError:
         info('Config file not found.')
