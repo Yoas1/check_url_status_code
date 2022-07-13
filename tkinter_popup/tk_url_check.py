@@ -1,8 +1,15 @@
 import requests
 import time
+import datetime
 from os import system, name
 import tkinter as tk
 from tkinter import messagebox
+
+
+def time_now():
+    now = datetime.datetime.now()
+    t_now = now.strftime('%H:%M:%S %d-%m-%Y')
+    return t_now
 
 
 def info(message, title="Error!"):
@@ -13,8 +20,6 @@ def info(message, title="Error!"):
     root.destroy()
 
 
-#info("Messagebox is cool")
-
 def clear_screen():
     if name == 'nt':
         _ = system('cls')
@@ -23,6 +28,7 @@ def clear_screen():
 
 
 while True:
+    print(time_now())
     global interval
     try:
         urls_file = open('urls-config', 'r')
@@ -46,9 +52,9 @@ while True:
                     print(list_url[0] + ' ' + status)
                 else:
                     print('Error ' + list_url[0] + ' ' + status)
-                    info(list_url[0] + ' not working Code status: ' + status)
+                    info(list_url[0] + ' not working Code status: ' + status + '\n' + time_now())
             except:
-                info(list_url[0] + ' not working ')
+                info(list_url[0] + ' not working!\n' + time_now())
                 print('Error ' + list_url[0])
         time.sleep(interval)
         clear_screen()
