@@ -40,7 +40,7 @@ while True:
 
     try:
         conf_len = len(urls)
-        for t in range(conf_len - (comf_len -1 )):
+        for t in range(conf_len - (conf_len -1 )):
             interval = int(urls[t])
         for url in range(lens(urls)):
             url = urls[url]
