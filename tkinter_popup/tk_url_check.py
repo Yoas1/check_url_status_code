@@ -42,7 +42,7 @@ while True:
         conf_len = len(urls)
         for t in range(conf_len - (conf_len -1 )):
             interval = int(urls[t])
-        for url in range(lens(urls)):
+        for url in range(len(urls)):
             url = urls[url]
             list_url = url.split(' ')
             try:
